@@ -34,7 +34,6 @@ export class OrdersService extends PrismaClient implements OnModuleInit {
         const price = products.find(
           (product) => product.id === orderItem.productId,
         ).price;
-        console.log(price, orderItem.quantity)
         return acc + price * orderItem.quantity;
       }, 0);
 
